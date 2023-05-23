@@ -18,7 +18,7 @@
             <configuration>  
                 <archive>  
                     <manifest>  
-                        <mainClass>com.georgios.App</mainClass>  
+                        <mainClass>com.georgios.StartUpClient</mainClass>  
                     </manifest>  
                 </archive>  
             </configuration>  

@@ -22,7 +22,7 @@
             <configuration>  
                 <archive>  
                     <manifest>  
-                        <mainClass>com.georgios.App</mainClass>  
+                        <mainClass>com.georgios.StartUpServer</mainClass>  
                     </manifest>  
                 </archive>  
             </configuration>  
