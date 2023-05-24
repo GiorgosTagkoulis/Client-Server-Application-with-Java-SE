@@ -40,8 +40,10 @@ class WordCounter {
             List<Map.Entry<String, Integer>> entries = new ArrayList<>(wordCounts.entrySet());
             entries.sort((a, b) -> b.getValue().compareTo(a.getValue()));
 
+            // print top 10 words
+            System.out.println("Top 10 words:");
             for (int i = 0; i < 10; i++) {
-                System.out.println(entries.get(i).getKey() + ": " + entries.get(i).getValue());
+                System.out.printf("%10s: %3d%n", entries.get(i).getKey(), entries.get(i).getValue());
             }
         } catch (IOException e) {
             System.out.println("WordCounter:countWords:" + e.getMessage());
