@@ -13,5 +13,7 @@ and at last: `mvn clean package`
 
 ## Run the project
 First run the server: `java -jar server/target/server-1.0.0.jar`
+The server is multithreaded, and currently can support 100 threads.
 
-Then the client: `java -jar client/target/client-1.0.0.jar`
+For each client you want to instantiate, open a new terminal and make sure you are in the same directory as before, meaning the root directory of the Client Server Application.
+Then you can run the client: `java -jar client/target/client-1.0.0.jar`
