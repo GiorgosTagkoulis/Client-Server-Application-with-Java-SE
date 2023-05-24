@@ -8,16 +8,6 @@ import java.util.*;
 
 class WordCounter {
 
-    public static void main(String[] args) {
-        System.out.println("WordCounter");
-        WordCounter wordCounter = new WordCounter();
-        try {
-            wordCounter.countWords("client/src/main/resources/islands_in_the_stream.txt");
-        } catch (IOException e) {
-            System.out.println("WordCounter:main:IOException:" + e.getMessage());
-        }
-    }
-
     void countWords(String fileName) throws IOException {
         try {
             Path filePath = Paths.get(fileName);
