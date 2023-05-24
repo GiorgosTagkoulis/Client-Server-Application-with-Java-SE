@@ -11,5 +11,5 @@
 .mvn/wrapper/maven-wrapper.jar
 
 .vscode
-client/src/main/resources/*
+client/src/main/resources/islands_in_the_stream.txt
 
