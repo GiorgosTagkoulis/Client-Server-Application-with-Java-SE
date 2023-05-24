@@ -8,13 +8,24 @@ import java.util.*;
 
 class WordCounter {
 
+    public static void main(String[] args) {
+        System.out.println("WordCounter");
+        WordCounter wordCounter = new WordCounter();
+        try {
+            wordCounter.countWords("client/src/main/resources/islands_in_the_stream.txt");
+        } catch (IOException e) {
+            System.out.println("WordCounter:main:IOException:" + e.getMessage());
+        }
+    }
+
     void countWords(String fileName) throws IOException {
         try {
             Path filePath = Paths.get(fileName);
             Map<String, Integer> wordCounts = new HashMap<>();
 
-            // Read all lines from file
+            // Read all lines from file and remove empty lines
             List<String> lines = Files.readAllLines(filePath);
+            lines.removeIf(line -> line.isEmpty());
 
             for (String line : lines) {
                 // Split line into words, removing non-alphabetical characters
@@ -25,6 +36,7 @@ class WordCounter {
                 }
             }
 
+            // Sort wordCounts by value
             List<Map.Entry<String, Integer>> entries = new ArrayList<>(wordCounts.entrySet());
             entries.sort((a, b) -> b.getValue().compareTo(a.getValue()));
 
