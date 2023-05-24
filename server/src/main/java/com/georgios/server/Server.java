@@ -34,12 +34,12 @@ public class Server {
                             clientChannel.write(buffer);
                         }
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        System.err.println("Server:serve:IOException:FileHandler" + e.getMessage());
                     } finally {
                         try {
                             clientChannel.close();
                         } catch (IOException e) {
-                            e.printStackTrace();
+                            System.err.println("Server:serve:IOException:clientClose" + e.getMessage());
                         }
                     }
                 });
