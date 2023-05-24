@@ -1,11 +1,15 @@
 package com.georgios;
 
-/**
- * Hello world!
- *
- */
+import com.georgios.server.Server;
+import java.io.IOException;
+
 public class StartUpServer {
     public static void main(String[] args) {
-        System.out.println("Server:Hello World!");
+        try {
+            Server server = new Server(8000);
+            server.serve();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
