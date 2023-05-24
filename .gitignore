@@ -11,5 +11,6 @@
 .mvn/wrapper/maven-wrapper.jar
 
 .vscode
+client/src/main/resources/
 
 
